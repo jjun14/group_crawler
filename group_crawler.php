@@ -17,7 +17,14 @@
       // now read through the simpleDOMHtml to figure out how to use it
       // inspect element at the above link to figure out what to look for
       // write the necessary output to format our crawl results
-      
+      $elements = $html->find('li.b_algo h2 a');
+      echo "<ul>";
+      foreach($elements as $link){
+        echo("<li><h2>".$link."<br>"."<h2>");
+        echo("<ul><li>".$link->href."</li></ul><br>");
+        echo "</li>";
+      } 
+      echo "</ul>";
     ?>
   </body>
 </html>
